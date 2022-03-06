@@ -15,8 +15,13 @@ namespace Zuper_Mart.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
 
+            return View();
+        }
+
+        public ActionResult Products()
+        {
+            
             return View();
         }
 
