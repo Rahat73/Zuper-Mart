@@ -9,11 +9,6 @@ body{
 	padding: 0;
 }
 
-.container {
-	position: -webkit-sticky;
-	position: sticky;
-	top: 0px;
-}
 
 .navbar-brand img{
 	max-height: 25px;

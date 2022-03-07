@@ -382,6 +382,8 @@
     <Content Include="Views\Home\Products.cshtml" />
     <Content Include="Views\Home\ExclusiveProducts.cshtml" />
     <Content Include="Views\Home\Team.cshtml" />
+    <Content Include="Views\Home\Wishlist.cshtml" />
+    <Content Include="Views\Home\UserProfile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

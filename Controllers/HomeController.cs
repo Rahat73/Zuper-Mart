@@ -38,6 +38,18 @@ namespace Zuper_Mart.Controllers
             return View();
         }
 
+        public ActionResult UserProfile()
+        {
+
+            return View();
+        }
+
+        public ActionResult Wishlist()
+        {
+
+            return View();
+        }
+
         public ActionResult Team()
         {
 
