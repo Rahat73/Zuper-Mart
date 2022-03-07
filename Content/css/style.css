@@ -5,58 +5,64 @@
 
 /*header*/
 body{
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0px;
 }
 
 .navbar-brand img{
-    max-height: 25px;
-    float: left;
-    margin-right: 7px;
+	max-height: 25px;
+	float: left;
+	margin-right: 7px;
 }
 #navbarDropdown img{   
-    background-color: #232323;
+	background-color: #232323;
 }
 
 @media (max-width: 640px)
 {
-    header{
-      background-color: black;
-      font-size: xx-small;
-    }
-    
+	header{
+	  background-color: black;
+	  font-size: xx-small;
+	}
+	
 }
 /*-------------------------------------------------------------*/
 
 /*hompage banner*/
 .carousel-inner{
-    max-height: 600px;
+	max-height: 600px;
 }
 #text1{
-    font-size: 30px;
+	font-size: 30px;
 }
 
 /*Latest Products*/
 .latest-products img{
-    max-height: 300px;
-    
+	max-height: 300px;
+	
 }
 /**************************************************************/
 /*login page*/
 .row{
-    display: flex;
+	display: flex;
 }
 #login{
-    padding-top: 10%;
+	padding-top: 10%;
 }
 #loginLabel{
-    padding-bottom: 20px;
+	padding-bottom: 20px;
 }
 #registerButton{
-    margin-top: 10px;
+	margin-top: 10px;
 }
 #emptyField{
-    margin: 240px ;
+	margin: 240px ;
 }
 
 
@@ -65,8 +71,8 @@ body{
 /*Products Page*/
 
 #cards{
-    padding-top: 20px;
-    padding-bottom: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 
@@ -78,96 +84,96 @@ pagination
 .pagination li a.page-link:focus,
 .pagination li.active a.page-link:hover,
 .pagination li.active a.page-link{
-    color: #fff;
+	color: #fff;
 	 /*#f33f3f or black*/
-    background-color: #f33f3f;
-    border: none;
+	background-color: #f33f3f;
+	border: none;
 }
 /**************************************************************/
 /*Login Page*/
 .row{
-    display: flex;
+	display: flex;
 }
 #login{
-    padding-top: 100px;
+	padding-top: 100px;
 }
 #loginLabel{
-    padding-bottom: 20px;
+	padding-bottom: 20px;
 }
 #registerButton{
-    margin-top: 10px;
+	margin-top: 10px;
 }
 #emptyField{
-    margin: 240px ;
+	margin: 240px ;
 }
 /**************************************************************/
 /*Exclusive Products Page*/
 #exclBanner .img{
-    min-width: 100%;
+	min-width: 100%;
 }
 #discount{
-    text-align: left;
-    color: red;
+	text-align: left;
+	color: red;
 }
 /*---------------------------------------------------------------*/
 
 /*About-us*/
 .page-heading{
-    background-color: rgb(14, 13, 13);
+	background-color: rgb(14, 13, 13);
 }
 .about-heading{    
-    margin-bottom: 35px;
+	margin-bottom: 35px;
 }
 #founder{
-    padding-bottom: 100px;
+	padding-bottom: 100px;
 }
 #founderText{
-    margin-left: 60px;
-    padding-left: 10px;
+	margin-left: 60px;
+	padding-left: 10px;
 }
-    
+	
 .partners{
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 70px;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 70px;
 }
 .client-item{
-    display: inline;;
+	display: inline;
 }
 .btn-light:hover, .btn-light:focus, .btn-light:active, .btn-light.active, .open>.dropdown-toggle.btn-light {
-    color: #fff;
-    background-color: #f33f3f;/*set the color you want here*/
-    border-color: #232323; 
-    padding-bottom: 10px;
+	color: #fff;
+	background-color: #f33f3f;/*set the color you want here*/
+	border-color: #232323; 
+	padding-bottom: 10px;
 
 }
 /*---------------------------------------------------------------*/
 
 /*team page*/
 .teams-socials{
-    padding-left: 30px;  
+	padding-left: 30px;  
 }
 /*Contact us page*/
 .storePic{
-    width: 70%;
+	width: 70%;
 }
 #map{
-    background-color: #121212;
+	background-color: #121212;
 }
 #contactusinfo{
-    text-align: center;
+	text-align: center;
 }
 #contactinfo{
-    margin-top: 100px;
-    text-align: left;
+	margin-top: 100px;
+	text-align: left;
 }
 .icon{
-    padding-right: 10px;
-    
+	padding-right: 10px;
+	
 }
 .send-message {
 	margin-top: 100px;
-    margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 .contact-form input {
@@ -224,13 +230,13 @@ pagination
 }
 @media (max-width: 991px)
 {
-    .contact{
-        padding: 50px;
-    }
-    .container .contactContainer{
-        flex-direction: column;
-    }
-    
+	.contact{
+		padding: 50px;
+	}
+	.container .contactContainer{
+		flex-direction: column;
+	}
+	
 }
 
 /*---------------------------------------------------------------*/
@@ -239,26 +245,26 @@ pagination
 
 /*Responsive codes*/
 @media (max-width: 576px) {
-    #founder img, #aboutLogo img{
-        width: 99%;
-    }
-    #exclBanner .bannerText{
-        transform: translate(-25%); 
-    }
+	#founder img, #aboutLogo img{
+		width: 99%;
+	}
+	#exclBanner .bannerText{
+		transform: translate(-25%); 
+	}
 
 }
 
 #exclBanner{
-    text-align: center;
+	text-align: center;
 }
 #exclBanner img{
-    min-width: 100%;
+	min-width: 100%;
 }
 #exclBanner .bannerText{
-    position: absolute;
-    left: 35%;
-    top: 50%;
-    font-size: 100px;
-    color: goldenrod;
-    opacity: 0.6;
+	position: absolute;
+	left: 35%;
+	top: 50%;
+	font-size: 100px;
+	color: goldenrod;
+	opacity: 0.6;
 }

@@ -31,5 +31,17 @@ namespace Zuper_Mart.Controllers
 
             return View();
         }
+
+        public ActionResult ExclusiveProducts()
+        {
+
+            return View();
+        }
+
+        public ActionResult Team()
+        {
+
+            return View();
+        }
     }
 }
