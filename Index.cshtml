@@ -1,0 +1,92 @@
+﻿@model List<Zuper_Mart.Models.Product>
+
+<!-- Page Content -->
+<!-- Banner Starts Here -->
+<div id="carousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="~/images/banner.jpg" class="d-block w-100" alt="ZuperMart">
+            <div class="carousel-caption d-none d-md-block d-sm-block">
+                <!--carousel text is a hassle so leaving it blank-->
+            </div>
+        </div><!--1st carousel end-->
+        <div class="carousel-item">
+            <img src="~/images/banner2.jpg" class="d-block w-100" alt="ZuperMart">
+        </div>
+        <div class="carousel-item">
+            <img src="~/images/banner3.jpg" class="d-block w-100" alt="ZuperMart">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+    @{
+        if (@ViewBag.username != null)
+        {
+            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" style="position: absolute; top: 20px; right:20px;">
+                <div class="toast-header">
+                    <img src="~/images/brand.png" class="rounded me-2" alt="..." style="width:30px;height:30px;">
+                    <strong class="me-auto">ZuperMart</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                    Welcome @ViewBag.username
+                </div>
+            </div>
+        }
+    }
+</div>
+<!-- Banner Ends Here -->
+
+<div class="latest-products">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h2>Latest Products</h2>
+                    <a href="@Url.Action("Products", "Home")">view all products <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4">
+                    <div class="product-item">
+                        <a href="/Home/ProductPreview/@item.ProductID"><img src="~/images/products/@item.PrdImgUrl" class="showImg" alt=""></a>
+                        <div class="down-content">
+                            <a href="/Home/ProductPreview/@item.ProductID"><h4>@item.PName</h4></a>
+                            <h6>@item.Price</h6>
+                            <p>@item.shortDescription</p>
+                            <ul class="stars">
+                                @{ 
+                                    for (int i = 1; i <= 5; i++) {
+                                        if (i <= item.PRating) {
+                                            <i class='fa fa-star text-warning'></i>
+                                        } else
+                                        {
+                                            <i class='fa fa-star text-secondary'></i>
+                                        }
+                                    }
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                                    }
+
+        </div>
+    </div>
+</div>
+
+<script>
+    window.onload = (event) => {
+        let myAlert = document.querySelector('.toast');
+        let bsAlert = new bootstrap.Toast(myAlert);
+        bsAlert.show();
+    }
+</script>
