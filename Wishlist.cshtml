@@ -1,0 +1,79 @@
+﻿@model List<Zuper_Mart.Models.Wishlist>
+@{
+    ViewBag.Title = "Wishlist";
+}
+<link href="~/Content/css/wishlist.css" rel="stylesheet" />
+<!-- Page Content -->
+
+<div class="page-heading header-text">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="text-content">
+                    <h4>Your</h4>
+                    <h2>Wishlist</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!--page heading ends-->
+
+
+<section id="cart-view">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="cart-view-area">
+                    <div class="cart-view-table aa-wishlist-table">
+                        <form action="/Home/RemoveWish2" method="post">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th></th>
+                                            <th>Product</th>
+                                            <th>Price</th>
+                                            <th>Stock Status</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @{
+                                            foreach (var item in Model)
+                                            {
+                                                <tr>
+                                                    <td>
+                                                        <button class="remove" type="submit" name="productID" value="@item.ProductID">
+                                                            
+                                                            <fa class="fa fa-close"></fa>
+                                                        </button>
+                                                    </td>
+                                                    <td><a href="/Home/ProductPreview/@item.ProductID"><img src="~/images/products/@item.Product.PrdImgUrl" alt="website template image"></a></td>
+                                                    <td><a class="aa-cart-title" href="/Home/ProductPreview/@item.ProductID">@item.Product.PName</a></td>
+                                                    <td>@item.Product.Price</td>
+                                                    @if (item.Product.inStock != 0)
+                                                    {
+                                                        <td>In Stock</td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td>Not In Stock</td>
+                                                    }
+                                                    <td><a href="#" class="aa-add-to-cart-btn">Add To Cart</a></td>
+                                                </tr>
+                                            }
+                                        }
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--page content ends-->
